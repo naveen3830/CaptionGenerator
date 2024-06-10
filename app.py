@@ -52,7 +52,7 @@ if submit:
 
 # Footer
 st.write("---")
-st.markdown("<small style='color:gray;'>© 2024 Color Crafter Bot. All rights reserved.</small>", unsafe_allow_html=True)
+st.markdown("<small style='color:gray;'>© 2024 Caption Crafter Bot. All rights reserved.</small>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     pass
