@@ -6,15 +6,15 @@ import os
 
 # Load environment variables
 load_dotenv()
-# groq_api_key = os.getenv('GROQ_API_KEY')
+groq_api_key = os.getenv('GROQ_API_KEY')
 # Load the GROQ and OpenAI API keys from Streamlit secrets
-groq_api_key = st.secrets["groq_api_key"]
+# groq_api_key = st.secrets["groq_api_key"]
 
 # Initialize the language model
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="Llama3-8b-8192")
 
 # Set the header of the Streamlit app
-st.title("Generate Captions 🤖")
+st.title("Captions Crafter Bot 🤖")
 st.markdown("<h4 style='color:gray;'>Please enter three words that best describe your social media post.</h4>", unsafe_allow_html=True)
 st.write("---")
 
@@ -46,13 +46,13 @@ if submit:
     if word1 and word2 and word3:  # Ensure all three words are provided
         st.markdown("<h5 style='color:green;'>Your Generated Caption:</h5>", unsafe_allow_html=True)
         caption = generate_caption(word1, word2, word3)
-        st.markdown(f"<div style='background-color:black; padding:10px; border-radius:5px;'>{caption}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='background-color:#708090; padding:10px; border-radius:5px;'>{caption}</div>", unsafe_allow_html=True)
     else:
         st.error("Please enter all three words to generate a caption.")
 
 # Footer
 st.write("---")
-st.markdown("<small style='color:gray;'>© 2024 Jarvis the Master Chef. All rights reserved.</small>", unsafe_allow_html=True)
+st.markdown("<small style='color:gray;'>© 2024 Color Crafter Bot. All rights reserved.</small>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     pass
