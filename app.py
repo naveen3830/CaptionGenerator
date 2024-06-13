@@ -6,13 +6,15 @@ import os
 
 # Load environment variables
 load_dotenv()
-# groq_api_key = os.getenv('GROQ_API_KEY')
+
 # Load the GROQ and OpenAI API keys from Streamlit secrets
-groq_api_key = st.secrets["groq_api_key"]
+groq_api_key = os.getenv('GROQ_API_KEY')
+# groq_api_key = st.secrets["groq_api_key"]
 
 # Initialize the language model
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="Llama3-8b-8192")
 
+st.set_page_config(page_title="Caption Crafter Bot",page_icon=":lightning:",initial_sidebar_state="expanded")
 # Set the header of the Streamlit app
 st.title("Captions Crafter Bot 🤖")
 st.markdown("<h4 style='color:gray;'>Please enter three words that best describe your social media post.</h4>", unsafe_allow_html=True)
@@ -52,7 +54,10 @@ if submit:
 
 # Footer
 st.write("---")
-st.markdown("<small style='color:gray;'>© 2024 Caption Crafter Bot. All rights reserved.</small>", unsafe_allow_html=True)
+st.markdown(
+        '<h6>Made in &nbsp<img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit logo" height="16">&nbsp by <a href="https://github.com/naveen3830"> @Naveen</a></h6>',
+            unsafe_allow_html=True,
+        )
 
 if __name__ == "__main__":
     pass
