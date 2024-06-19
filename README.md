@@ -84,10 +84,6 @@ Contributions are welcome! Please open an issue or submit a pull request with yo
 4. Push to the branch (`git push origin feature/your-feature-name`).
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Acknowledgements
 
 - [Streamlit](https://streamlit.io/) for the awesome app framework.
