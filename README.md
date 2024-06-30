@@ -1,5 +1,5 @@
 # Caption Crafter Bot 🤖
-🌐 **Website**: [Caption Crafter Bot](https://captioncrafter.streamlit.app/)
+## 🌐 **Website**: [Caption Crafter Bot](https://captioncrafter.streamlit.app/)
 
 Caption Crafter Bot is a Streamlit-based application that generates creative social media captions based on three descriptive words provided by the user. It uses the LangChain library and the ChatGroq language model to create engaging captions for your social media posts.
 
